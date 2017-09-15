@@ -112,6 +112,9 @@ bindsym $mod+a focus parent
 bindsym Print exec --no-startup-id scrot 
 bindsym $mod+Print --release exec --no-startup-id scrot -s
 
+#Lock
+bindsym $mod+0 exec --no-startup-id i3lock --fuzzy
+
 # nombres del area de trabajo
 set $workspace1 "1:  / "
 set $workspace2 "2:   /  "
@@ -122,7 +125,6 @@ set $workspace6 "6:  "
 set $workspace7 "7:  "
 set $workspace8 "8:  "
 set $workspace9 "9:  "
-set $workspace10 "10:  "
 
 # Desplazar entre workspaces
 bindsym $mod+Home workspace $workspace1
@@ -140,7 +142,6 @@ bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
 bindsym $mod+8 workspace $workspace8
 bindsym $mod+9 workspace $workspace9
-bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1

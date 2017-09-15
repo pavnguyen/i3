@@ -1,7 +1,7 @@
 #!/bin/sh
 case "$1" in
     lock)
-        i3lock
+        i3lock --fuzzy
         ;;
     logout)
         i3-msg exit
