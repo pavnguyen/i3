@@ -37,11 +37,14 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite -e fish
 
+# run pcmnanfm
+bindsym Mod1+e exec pcmanfm
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -i -nb '$bg-color' -nf '#000000' -sb '#d9534f' -sf '#151617'
+bindsym $mod+d exec dmenu_run -i -nb '$bg-color' -nf '#000000' -sb '#ff2056' -sf '#151617'
 
 # bindsym $mod+d exec rofi -show run -lines 5 -opacity "85"
 
@@ -226,12 +229,6 @@ for_window [class="^.*"] border pixel 2
 gaps inner 3
 gaps outer 0
 
-set $bg-color            #66cd00
-set $inactive-bg-color   #83d0c9
-set $text-color          #000000
-set $inactive-text-color #000000
-set $urgent-bg-color     #E53935
-
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10 # decrease screen brightness
 
@@ -254,9 +251,16 @@ client.urgent           #4A4A4A #4A4A4A #f7f7f7 #4A4A4A
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+set $bg-color            #66cd00
+set $inactive-bg-color   #ff2056
+set $text-color          #000000
+set $inactive-text-color #000000
+set $urgent-bg-color     #E53935
+
 bar {
+	position top
         status_command i3blocks -c /home/paul/.config/i3/i3blocks.conf
-	font pango: DejaVu Sans Mono 9
+	font pango: Ubuntu Mono 9
         colors {
                 background #000000
                 separator #757575
