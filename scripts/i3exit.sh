@@ -1,7 +1,7 @@
 #!/bin/sh
 case "$1" in
     lock)
-        slimlock
+        i3lock
         ;;
     logout)
         i3-msg exit
