@@ -174,6 +174,22 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym Mod1+Left resize grow width 10 px or 10 ppt
 bindsym Mod1+Right resize shrink width 10 px or 10 ppt
 
+#Press $mod (super) and X to exit
+bindsym $mod+X mode "$mode_system"
+
+set $mode_system (k)   (l)   (u)   (h) ⏾  (r)   (s) 
+mode "$mode_system" {
+    bindsym k exec --no-startup-id i3lock, mode "default"
+    bindsym l exec --no-startup-id ~/.config/i3/scripts/i3exit.sh logout, mode "default"
+    bindsym u exec --no-startup-id ~/.config/i3/scripts/i3exit.sh suspend, mode "default"
+    bindsym r exec --no-startup-id ~/.config/i3/scripts/i3exit.sh reboot, mode "default"
+    bindsym s exec --no-startup-id ~/.config/i3/scripts/i3exit.sh shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
