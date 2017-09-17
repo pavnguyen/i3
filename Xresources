@@ -86,13 +86,13 @@ URxvt*color14: #93e0e3
 URxvt*color15: #ffffff
 
 ! fonts
-URxvt*letterSpace: 	    		-2
+!URxvt*letterSpace: 	    		-2
 !Xft.size:						12
 URxvt*font:                 	xft:Ubuntu Mono:regular:size=11
 URxvt*imFont:               	xft:Ubuntu Mono:regular:size=11
 URxvt*boldFont:             	xft:Ubuntu Mono:bold:size=11
 URxvt*italicFont:           	xft:Ubuntu Mono:italic:size=11
-URxvt*boldItalicFont:     		xft:Monospace:regular:size=11
+URxvt*boldItalicFont:     		xft:Ubuntu Mono:regular:size=11
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions
