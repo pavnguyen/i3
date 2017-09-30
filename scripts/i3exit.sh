@@ -16,7 +16,7 @@ case "$1" in
         sudo reboot
         ;;
     shutdown)
-        sudo poweroff
+        sudo halt
         ;;
     *)
         echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
